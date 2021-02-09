@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .overflow-container {
+  overflow: hidden;
+}
+
+body .tutorial {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+body .tutorial .tutorial-card {
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  border: 3px solid darkslateblue;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body .tutorial .tutorial-card .tutorial-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+body .tutorial .tutorial-card .tutorial-page .start {
+  color: gold;
+  padding: 0 10px;
+  font-size: 18pt;
+}
+
+body .tutorial .tutorial-card .tutorial-page .end {
+  color: crimson;
+  padding: 0 10px;
+  font-size: 16pt;
+}
+
+body .tutorial .tutorial-card .tutorial-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .tutorial .tutorial-card .tutorial-btns button {
+  margin: 1%;
+  padding: 10px;
+  background-color: darkslateblue;
+  color: white;
+  border: 2px solid darkslateblue;
+  border-radius: 3px;
+  outline: none;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+body .tutorial .tutorial-card .tutorial-btns button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: darkslateblue;
+  cursor: pointer;
+}
+
+body .tutorial .tutorial-card .tutorial-btns .previous {
+  margin-left: auto;
+}
+
+body .header {
+  padding: 3px 5%;
+  width: 100%;
+  color: darkslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header img {
+  height: 30px;
+  padding: 0 10px;
+}
+
+body .header i {
+  margin-left: auto;
+  font-size: 14pt;
+  padding: 5px;
+  cursor: pointer;
+}
+
+body header {
+  width: 100vw;
+  height: 60px;
+  padding: 0 3%;
+  background-color: darkslateblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+body header section .select {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  cursor: pointer;
+}
+
+body header section .select i {
+  position: relative;
+  left: 6px;
+}
+
+body header section .select ul {
+  display: none;
+  top: 100%;
+  padding-top: 10px;
+  position: absolute;
+  width: 180px;
+  background-color: white;
+  border: 4px solid darkslateblue;
+  border-top: none;
+}
+
+body header section .select ul li {
+  width: 100%;
+  color: darkslateblue;
+  padding: 5px 15px;
+  line-height: 30px;
+  border-bottom: 1px solid darkslateblue;
+  list-style: none;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+body header section .select ul li:hover {
+  color: white;
+  background-color: darkslateblue;
+  cursor: pointer;
+}
+
+body header section .select ul:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  background-color: darkslateblue;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+}
+
+body header section .select:hover ul {
+  display: block;
+}
+
+body header .start-alg {
+  background-color: white;
+  color: darkslateblue;
+  border: 2px solid darkslateblue;
+  height: 40px;
+  text-align: center;
+  padding: 0 30px;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body header .start-alg:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: darkslateblue;
+}
+
+body header .start-alg:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+body header button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+}
+
+body header button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+body header .slider label {
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body header .slider input {
+  outline: none;
+}
+
+body .legenda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 60px;
+  padding-left: 9vw;
+  font-size: 10pt;
+}
+
+body .legenda .leg-item {
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .legenda .leg-item .pre {
+  margin: 5px;
+  width: 28px;
+  height: 28px;
+  font-size: 14pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .legenda .leg-item .start {
+  color: gold;
+  margin: 5px;
+}
+
+body .legenda .leg-item .end {
+  margin: 5px;
+  color: crimson;
+}
+
+body .legenda .leg-item .empty {
+  border: 1px solid lightblue;
+}
+
+body .legenda .leg-item .vis1 {
+  border: 1px solid lightblue;
+  background-color: cyan;
+}
+
+body .legenda .leg-item .short {
+  border: 1px solid lightblue;
+  background-image: linear-gradient(135deg, yellow, #ff7d7d);
+}
+
+body .legenda .leg-item .wall {
+  background-color: black;
+}
+
+body .legenda .leg-item .direction-node {
+  color: darkslateblue;
+}
+
+body .legenda .no-weight {
+  color: darkred;
+  text-decoration: line-through;
+}
+
+body .al-dis {
+  text-align: center;
+}
+
+body .grid-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .grid-container .grid {
+  margin: 10px;
+  border-right: 1px solid lightblue;
+  border-bottom: 1px solid lightblue;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .grid-container .grid .spot {
+  background-color: white;
+  border-left: 1px solid lightblue;
+  border-top: 1px solid lightblue;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body .grid-container .grid .spot .start {
+  color: gold;
+  -webkit-animation: enlarge 0.3s ease;
+          animation: enlarge 0.3s ease;
+  cursor: pointer;
+  font-size: 20pt;
+}
+
+body .grid-container .grid .spot .end {
+  -webkit-animation: enlarge 0.3s ease;
+          animation: enlarge 0.3s ease;
+  color: crimson;
+  cursor: pointer;
+  font-size: 15pt;
+}
+
+body .grid-container .grid .spot .weight {
+  font-size: 16px;
+  -webkit-animation: enlarge 0.3s ease;
+          animation: enlarge 0.3s ease;
+}
+
+body .grid-container .grid .spot .direction-node {
+  font-size: 16px;
+  -webkit-animation: enlarge 0.3s ease;
+          animation: enlarge 0.3s ease;
+  color: darkslateblue;
+}
+
+body .no-click {
+  pointer-events: none !important;
+}
+
+@-webkit-keyframes enlarge {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+
+@-webkit-keyframes disapair {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: magenta;
+  }
+  100% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    background-color: cyan;
+  }
+}
+
+@keyframes disapair {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: magenta;
+  }
+  100% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    background-color: cyan;
+  }
+}
+
+@-webkit-keyframes search {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    background-color: magenta;
+  }
+}
+
+@keyframes search {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    background-color: magenta;
+  }
+}
+
+@-webkit-keyframes path {
+  0% {
+    background-color: magenta;
+  }
+}
+
+@keyframes path {
+  0% {
+    background-color: magenta;
+  }
+}
+
+@media (max-width: 1440px) {
+  body .tutorial p {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 1024px) {
+  body header {
+    font-size: 10pt;
+  }
+  body .tutorial p {
+    font-size: 9pt;
+  }
+}
+
+@media (max-width: 768px) {
+  body .tutorial p {
+    font-size: 8pt;
+  }
+  body .legenda {
+    display: none;
+  }
+  body header {
+    height: 120px;
+  }
+  body header section {
+    width: 100%;
+    height: 50%;
+  }
+  body header .select i {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  body .tutorial .tutorial-card {
+    width: 90%;
+  }
+  body .tutorial img {
+    width: 80%;
+  }
+  body header section {
+    font-size: 7pt;
+  }
+  body header section button {
+    font-size: 8pt;
+  }
+}
+
+@media (max-height: 500px) {
+  body .tutorial img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

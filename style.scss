@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  .overflow-container {
+    overflow: hidden;
+  }
+
+  .tutorial {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    .tutorial-card {
+      width: 60%;
+      height: 80%;
+      background-color: white;
+      border: 3px solid darkslateblue;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2%;
+      align-items: center;
+      text-align: center;
+
+      .tutorial-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .start {
+          color: gold;
+          padding: 0 10px;
+          font-size: 18pt;
+        }
+
+        .end {
+          color: crimson;
+          padding: 0 10px;
+          font-size: 16pt;
+        }
+      }
+
+      .tutorial-btns {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        button {
+          margin: 1%;
+          padding: 10px;
+          background-color: darkslateblue;
+          color: white;
+          border: 2px solid darkslateblue;
+          border-radius: 3px;
+          outline: none;
+          transition: 0.1s ease;
+
+          &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: darkslateblue;
+            cursor: pointer;
+          }
+        }
+
+        .previous {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .header {
+    padding: 3px 5%;
+    width: 100%;
+    color: darkslateblue;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 30px;
+      padding: 0 10px;
+    }
+    i {
+      margin-left: auto;
+      font-size: 14pt;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+
+  header {
+    width: 100vw;
+    height: 60px;
+    padding: 0 3%;
+    background-color: darkslateblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    section {
+      display: flex;
+      height: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 50%;
+
+      .select {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.9);
+        height: 100%;
+        cursor: pointer;
+
+        i {
+          position: relative;
+          left: 6px;
+        }
+
+        ul {
+          display: none;
+          top: 100%;
+          padding-top: 10px;
+          position: absolute;
+          width: 180px;
+          background-color: white;
+          border: 4px solid darkslateblue;
+          border-top: none;
+
+          li {
+            width: 100%;
+            color: darkslateblue;
+            padding: 5px 15px;
+            line-height: 30px;
+            border-bottom: 1px solid darkslateblue;
+            list-style: none;
+            transition: 0.1s ease;
+
+            &:hover {
+              color: white;
+              background-color: darkslateblue;
+              cursor: pointer;
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            background-color: darkslateblue;
+            transform: translateX(-50%) rotate(45deg);
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .start-alg {
+      background-color: white;
+      color: darkslateblue;
+      border: 2px solid darkslateblue;
+      height: 40px;
+      text-align: center;
+      padding: 0 30px;
+      border-radius: 5px;
+      transition: 0.2s ease;
+
+      &:hover {
+        color: white;
+        border: 2px solid white;
+        background-color: darkslateblue;
+      }
+
+      &:active {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .slider {
+      label {
+        padding: 5px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      input {
+        outline: none;
+      }
+    }
+  }
+
+  .legenda {
+    display: flex;
+    justify-content: center;
+    padding: 10px 60px;
+    padding-left: 9vw;
+    font-size: 10pt;
+
+    .leg-item {
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .pre {
+        margin: 5px;
+        width: 28px;
+        height: 28px;
+        font-size: 14pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .start {
+        color: gold;
+        margin: 5px;
+      }
+
+      .end {
+        margin: 5px;
+        color: crimson;
+      }
+
+      .empty {
+        border: 1px solid lightblue;
+      }
+
+      .vis1 {
+        border: 1px solid lightblue;
+        background-color: cyan;
+      }
+
+      .short {
+        border: 1px solid lightblue;
+        background-image: linear-gradient(135deg, yellow, #ff7d7d);
+      }
+
+      .wall {
+        background-color: black;
+      }
+
+      .direction-node {
+        color: darkslateblue;
+      }
+    }
+
+    .no-weight {
+      color: darkred;
+      text-decoration: line-through;
+    }
+  }
+
+  .al-dis {
+    text-align: center;
+  }
+
+  .grid-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .grid {
+      margin: 10px;
+      border-right: 1px solid lightblue;
+      border-bottom: 1px solid lightblue;
+      display: -ms-grid;
+      display: grid;
+
+      .spot {
+        background-color: white;
+        border-left: 1px solid lightblue;
+        border-top: 1px solid lightblue;
+        transition: 0.3s ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .start {
+          color: gold;
+          animation: enlarge 0.3s ease;
+          cursor: pointer;
+          font-size: 20pt;
+        }
+
+        .end {
+          animation: enlarge 0.3s ease;
+          color: crimson;
+          cursor: pointer;
+          font-size: 15pt;
+        }
+
+        .weight {
+          font-size: 16px;
+          animation: enlarge 0.3s ease;
+        }
+
+        .direction-node {
+          font-size: 16px;
+          animation: enlarge 0.3s ease;
+          color: darkslateblue;
+        }
+      }
+    }
+  }
+
+  .no-click {
+    pointer-events: none !important;
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    transform: scale(0.4);
+  }
+}
+
+@keyframes disapair {
+  0% {
+    transform: scale(1);
+    background-color: magenta;
+  }
+  100% {
+    transform: scale(0.1);
+    background-color: cyan;
+  }
+}
+
+@keyframes search {
+  0% {
+    transform: scale(0.1);
+    background-color: magenta;
+  }
+}
+
+@keyframes path {
+  0% {
+    background-color: magenta;
+  }
+}
+
+@media (max-width: 1440px) {
+  body .tutorial p {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    header {
+      font-size: 10pt;
+    }
+    .tutorial p {
+      font-size: 9pt;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .tutorial p {
+      font-size: 8pt;
+    }
+
+    .legenda {
+      display: none;
+    }
+
+    header {
+      height: 120px;
+      section {
+        width: 100%;
+        height: 50%;
+      }
+
+      .select i {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  body {
+    .tutorial {
+      .tutorial-card {
+        width: 90%;
+      }
+
+      img {
+        width: 80%;
+      }
+    }
+
+    header {
+      section {
+        font-size: 7pt;
+        button {
+          font-size: 8pt;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  body .tutorial img {
+    display: none;
+  }
+}

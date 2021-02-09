@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="icon" href="./images/path-logo.png">
+</head>
+<body>
+    <div class="overflow-container">
+        <section class="tutorial">
+            <div class="tutorial-card">
+                <div class="tutorial-page">
+                    <div class="tut-counter">1/7</div>
+                    <h1>Welcome to the Pathfinding Algorithm Visualizer</h1>
+                    <p>This short tutorial will walk you through all the features of this application.</p>
+                    <img src="./images/path-logo.png" alt="">
+                </div>
+                <div class="tutorial-btns">
+                    <button class="skip-tutorial">Skip Tutorial</button>
+                    <button class="previous">Previous</button>
+                    <button class="next">Next</button>
+                </div>
+            </div>
+        </section>
+        <div class="header"><img src="./images/path-logo.png" alt=""> PathFinding Algorithm Visualizer <i class="far fa-question-circle tut-btn"></i></div>
+        <header>
+            <section class="left-header">
+                <div class="select">
+                    Choose Algorithm<i class="fas fa-sort-down"></i>
+                    <ul>
+                        <li class="dijkstra">Dijkstra</li>
+                        <li class="a-star">A* Pathfinding</li>
+                        <li class="greedy">Greedy Best-First Search</li>
+                        <li class="dfs">Depth First Search</li>
+                        <li class="bfs">Breath First Search</li>
+                    </ul>
+                </div>
+                <div class="select">
+                    Add Maze Algorithm<i class="fas fa-sort-down"></i>
+                    <ul>
+                        <li class="prim">Prim's Maze</li>
+                        <li class="rec-back">Recursive Backtracker</li>
+                        <li class="rec-div">Recursive Division</li>
+                        <li class="hor-div">Horizontal Division</li>
+                        <li class="ver-div">Verticale Division</li>
+                    </ul>
+                </div>
+                <button class="start-alg">Choose Algorithm</button>
+            </section>
+            <section class="right-header">
+                <button class="restart">restart</button>
+            <button class="clear-walls">clear walls</button>
+            <div class="slider">
+                <label for="speed">Speed:</label>
+                <input type="range" min="0" max="3" id="speed" value="2">   
+            </div>
+            </section>
+        </header>
+        <div class="legenda">
+            <div class="leg-item"><div class="pre"><i class="fas fa-angle-right start"></i></div>Start Node</div>
+            <div class="leg-item"><div class="pre"><i class="fas fa-map-marker-alt end"></i></div>End Node</div>
+            <div class="leg-item"><div class="pre"><i class="fas fa-arrow-circle-left direction-node"></i></div>Direction Node</div>
+            <div class="leg-item weight-pre"><div class="pre"><i class="fas fa-dumbbell weight"></i></div>Weight Node</div>
+            <div class="leg-item"><div class="pre empty"></div>Clear Node</div>
+            <div class="leg-item"><div class="pre vis1"></div>Visited Node</div>
+            <div class="leg-item"><div class="pre short"></div>Shortest-Path Node</div>
+            <div class="leg-item"><div class="pre wall"></div>Wall Node</div>
+        </div>
+    
+        <div class="al-dis">Pick a <strong>Algorithm</strong> from the list to <strong>Visualize</strong> it.</div>
+    
+        <div class="grid-container">
+            <div class="grid"></div>
+        </div>
+    </div>
+    
+    <script src="path.js"></script>
+    <script src="pathfinder.js"></script>
+    <script src="maze.js"></script>
+</body>
+</html>
